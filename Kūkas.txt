@@ -1,0 +1,61 @@
+# Define the amounts of each ingredient needed for one cake
+
+milti_needed = 2        # grams
+
+olas_needed = 3         # number of eggs
+
+piens_needed = 1        # grams
+
+cukurs_needed = 1.5     # grams
+
+cepam_pulveris_needed = 1 # teikarote
+
+while True:
+
+    # Input the available ingredients
+
+    milti_available = float(input("Enter available flour in grams: "))
+
+    olas_available = int(input("Enter available eggs: "))
+
+    piens_available = float(input("Enter available milk in grams: "))
+
+    cukurs_available = float(input("Enter available sugar in grams: "))
+
+    cepam_pulversis_available = float(input("Enter available cepam pulveri in teikarotes: "))
+
+    # Check if all ingredients are available
+
+    if milti_available <= 0 or olas_available <= 0 or piens_available <= 0 or cukurs_available <= 0 or cepam_pulversis_available <= 0:
+
+        print("Can't make cake: at least one ingredient is missing.")
+
+    else:
+
+        # Calculate the maximum number of kūkas for each ingredient
+
+        cakes_by_flour = milti_available // milti_needed
+
+        cakes_by_eggs = olas_available // olas_needed
+
+        cakes_by_milk = piens_available // piens_needed
+
+        cakes_by_sugar = cukurs_available // cukurs_needed
+
+        cakes_by_baking_powder = cepam_pulversis_available // cepam_pulveris_needed
+
+        # Determine the limiting ingredient
+
+        max_cakes = min(cakes_by_flour, cakes_by_eggs, cakes_by_milk, cakes_by_sugar, cakes_by_baking_powder)
+
+        # Output the result
+
+        print(f"You can make {max_cakes} cake(s).")
+
+    # Ask the user if they want to enter more ingredients
+
+    again = input("Do you want to check for another batch of ingredients? (yes/no): ").strip().lower()
+
+    if again != 'yes':
+
+        break
