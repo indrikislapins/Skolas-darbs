@@ -14,13 +14,13 @@ while True:
 
     # Input the available ingredients
 
-    milti_available = float(input("Enter available flour in grams: "))
+    milti_available = float(input("Enter available milti in grams: "))
 
-    olas_available = int(input("Enter available eggs: "))
+    olas_available = int(input("Enter available olas: "))
 
-    piens_available = float(input("Enter available milk in grams: "))
+    piens_available = float(input("Enter available piens in grams: "))
 
-    cukurs_available = float(input("Enter available sugar in grams: "))
+    cukurs_available = float(input("Enter available cukurs in grams: "))
 
     cepam_pulversis_available = float(input("Enter available cepam pulveri in teikarotes: "))
 
